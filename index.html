@@ -66,6 +66,7 @@ console.log(fullNames);
     const oldest = inventors.sort(function(a, b) {
         const lastGuy = a.passed - a.year;
         const nextGuy = b.passed - b.year;
+        return lastGuy > nextGuy ? -1 : 1;
         if(lastGuy > nextGuy) {
             return -1;
         } else {
